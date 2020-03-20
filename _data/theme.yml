@@ -8,15 +8,15 @@
 #
 # featured image is used in home page banner and in meta markup to represent the collection
 # use either an objectid (from an item in this collect), a relative location of an image in this repo, or a full url to an image elsewhere
-featured-image: demo_psychiana548
-home-title-y-padding: 12em # the margin from the top your title portion will appear.
+featured-image: /assets/img/nc.png
+home-title-y-padding: 10em # the margin from the top your title portion will appear.
 home-banner-image-position: center # [options: top, center, bottom] Default: top
-carousel-height: # in px, but don't include the "px"; default is 450.
+carousel-height: 300 # in px, but don't include the "px"; default is 450.
 # carousel can feature specific item types: image,pdf,youtube,thumbs
-carousel-type: image
+carousel-type: thumbs
 featured-subjects: #separate semi-colon(';') - if left blank, will be automatically generated to create top 5 subjects
 featured-subjects-max: 6 # set number of top subjects to display if auto generating
-featured-locations: Moscow, ID #separate by semi-colon(';') - if left blank, will be automatically generated to create top 5 locations
+featured-locations: #separate by semi-colon(';') - if left blank, will be automatically generated to create top 5 locations
 featured-locations-max: 3
 
 ##########
@@ -24,7 +24,7 @@ featured-locations-max: 3
 #
 # Featured image on About page - if left blank, CB will use image featured on the home page
 # use either an objectid (from an item in this collect), a relative location of an image in this repo, or a full url to an image elsewhere
-about-featured-image: demo_psychiana565
+about-featured-image: /assets/img/nc.png
 
 ##########
 # BROWSE PAGE
@@ -36,12 +36,12 @@ about-featured-image: demo_psychiana565
 # ITEM PAGE
 #
 # see _data/metadata-config.csv to define the metadata fields that will display.
-browse-buttons: true # true / false, adds previous/next arrows to items, but increases build time
+browse-buttons: false # true / false, adds previous/next arrows to items, but increases build time
 
 ##########
 # SUBJECTS PAGE
 #
-subjects-fields: subject;creator # set of fields separated by ; to be featured in the cloud (leave blank or comment out to not generate)
+subjects-fields: subject;digitalcollection # set of fields separated by ; to be featured in the cloud (leave blank or comment out to not generate)
 subjects-min: 1 # min size for subject cloud, too many terms = slow load time!
 subjects-stopwords: # set of subjects separated by ; that will be removed from display, e.g. boxers;boxing
 
@@ -68,17 +68,17 @@ map-cluster-radius: 25 # size of clusters, from ~ 10 to 80
 ##########
 # TIMELINE PAGE
 #
-year-navigation: #"1900;1905;1910;1915;1920" # manually set years to appear in dropdown nav
-year-nav-increment: 5 # set increments to auto gen nav years
+year-navigation: #"1900;1905;1910;1915;1920;1925" # manually set years to appear in dropdown nav
+year-nav-increment: 10 # set increments to auto gen nav years
 
 ##########
 # DATA 
 # 
 # add metadata fields for export in data downloads (tip: paste in first row of csv)
 # comma delimited list, reference url is automatic
-metadata-export-fields: "title,description,creator,recipient,date,date-is-approximate,latitude,longitude,item-information,subject,related-publication,publisher-digital,source,original-identifier,identifier,rights,rightsstatement,type,format,language,relation,cdmid,objectid,youtubeid"
+metadata-export-fields: "objectid,cdmid,collectionid,compound,cpdmaster,title,othertitle,creator,contributor,date,description,subject,location,time_period,abstract,publisher,serialtitle,agencycurrent,rights,physicalcharacteristics,source,identifier,type,physicalformat,language,digitalcharacteristics,digitalcollection,format,titlereplaces,titlereplacedby,audience,metadatacreator,presfilename,preslocalfilepath,fulltext,capturetools,oclcnumber"
 # generate a facets list for given fields, comma delimited
-metadata-facets-fields: "subject,creator,format"
+metadata-facets-fields: "subject,digitalcollection,physicalformat"
 
 ##########
 # ADVANCED OPTIONS

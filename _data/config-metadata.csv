@@ -1,5 +1,6 @@
 field,display_name,browse_link,dc_map,schema_map
 title,Title,,DCTERMS.title,headline
+digitalcollection,Digital Collection,true,
 creator,Creator,,DCTERMS.creator,creator
 recipient,Recipient,
 date,Date Created,,DCTERMS.created,dateCreated
